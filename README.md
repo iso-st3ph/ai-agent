@@ -210,9 +210,9 @@ python daily_digest.py
 crontab -e        # opens editor; press i to insert, Esc then :wq to save (vim)
 ```
 
-Add this line (runs 8am daily, logs output):
+Add this line (runs 8am daily, logs output). **Replace `/path/to` with your actual path**:
 ```
-0 8 * * * cd /Users/stephon.skipper/ai-agent && /Users/stephon.skipper/ai-agent/.venv/bin/python daily_digest.py >> digest.log 2>&1
+0 8 * * * cd /path/to/ai-agent && /path/to/ai-agent/.venv/bin/python daily_digest.py >> digest.log 2>&1
 ```
 
 ```bash

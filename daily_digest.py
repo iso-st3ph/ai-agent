@@ -44,10 +44,12 @@ load_dotenv()
 MODEL = "claude-opus-4-7"
 
 # WHO to search for. Specific terms beat a bare name (which returns mostly noise).
-SEARCH_SUBJECT = "Stephon Skipper, Waldorf Maryland"
+# TODO: Change this to your name and relevant keywords
+SEARCH_SUBJECT = "Your Name, Your City State"
 
 # WHERE the digest goes. Hardcoded on purpose — this job can ONLY email you.
-RECIPIENT = "stephonmskipper@gmail.com"
+# TODO: Change this to YOUR email address before running
+RECIPIENT = "your-email@example.com"
 
 # Gmail send scope (reuses the token agent.py already authorized)
 GMAIL_SCOPES = ["https://www.googleapis.com/auth/gmail.send"]
