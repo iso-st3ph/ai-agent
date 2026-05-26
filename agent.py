@@ -41,7 +41,7 @@ from googleapiclient.discovery import build
 # ----------------------------------------------------------------------------
 # Config
 # ----------------------------------------------------------------------------
-MODEL = "claude-opus-4-7"          # swap to a smaller model to save cost while testing
+MODEL = "claude-sonnet-4-20250514"          # swap to a smaller model to save cost while testing
 MAX_TURNS = 25                     # safety cap so the loop can't run forever
 WORKSPACE = Path("workspace")      # the ONLY folder file tools can touch
 WORKSPACE.mkdir(exist_ok=True)
