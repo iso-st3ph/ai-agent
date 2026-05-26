@@ -1,13 +1,30 @@
 # Secrets — never commit these
 .env
+credentials.json
+client_secret*.json
+token.json
 
 # Python virtual environment
 .venv/
+venv/
+ENV/
+env/
 __pycache__/
 *.pyc
+*.py[cod]
+*$py.class
+*.so
 
 # The agent's working sandbox (its files aren't source code)
 workspace/
 
-credentials.json
-token.json
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
