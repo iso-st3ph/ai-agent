@@ -186,7 +186,7 @@ Example requests to type at the `you ▸` prompt:
 Make a file called groceries.txt with a weekly shopping list
 Read groceries.txt and draft an email to my spouse with the list
 What are my 3 most recent emails? Anything that needs a reply?
-Find pediatricians within 15 miles of 00000 with 10+ years experience, then email me the shortlist
+Find dentists within 10 miles of my zip code with 5+ years experience, then email me the shortlist
 ```
 
 ## 5. Test the auth helper directly (debugging)
