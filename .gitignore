@@ -1,0 +1,13 @@
+# Secrets — never commit these
+.env
+
+# Python virtual environment
+.venv/
+__pycache__/
+*.pyc
+
+# The agent's working sandbox (its files aren't source code)
+workspace/
+
+credentials.json
+token.json
