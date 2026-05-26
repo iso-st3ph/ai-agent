@@ -18,6 +18,10 @@ __pycache__/
 # The agent's working sandbox (its files aren't source code)
 workspace/
 
+# Logs - may contain personal information
+digest.log
+*.log
+
 # IDE
 .vscode/
 .idea/
