@@ -10,6 +10,27 @@ instead of hiding the mechanics behind a framework.
 
 Both live in the same folder and share the same virtual environment.
 
+## Quick Start
+
+```bash
+# Clone and setup
+git clone https://github.com/iso-st3ph/ai-agent.git
+cd ai-agent
+
+# Create virtual environment and install dependencies
+python3 -m venv .venv
+source .venv/bin/activate  # Windows: .venv\Scripts\activate
+pip install -r requirements.txt
+
+# Add your Anthropic API key
+echo 'ANTHROPIC_API_KEY=sk-ant-your-key-here' > .env
+
+# Run the interactive agent
+python agent.py
+```
+
+For Gmail features, see **Gmail OAuth setup** below.
+
 ---
 
 ## The mental model (read this first)
@@ -91,9 +112,12 @@ code .
 python3 -m venv .venv
 source .venv/bin/activate                 # Windows: .venv\Scripts\activate
 
-# Install all dependencies (interactive agent + Gmail + Google APIs)
-pip install anthropic python-dotenv \
-  google-auth google-auth-oauthlib google-api-python-client
+# Install all dependencies from requirements.txt
+pip install -r requirements.txt
+
+# Or install individually (same result):
+# pip install anthropic python-dotenv \
+#   google-auth google-auth-oauthlib google-api-python-client
 
 # Put your Anthropic API key in .env (edit the placeholder afterward!)
 echo 'ANTHROPIC_API_KEY=sk-ant-your-key-here' > .env
@@ -186,9 +210,9 @@ python daily_digest.py
 crontab -e        # opens editor; press i to insert, Esc then :wq to save (vim)
 ```
 
-Add this line (runs 8am daily, logs output):
+Add this line (runs 8am daily, logs output). **Replace `/path/to` with your actual path**:
 ```
-0 8 * * * cd ~/ai-agent/ai-agent && ~/ai-agent/ai-agent/.venv/bin/python daily_digest.py >> digest.log 2>&1
+0 8 * * * cd /path/to/ai-agent && /path/to/ai-agent/.venv/bin/python daily_digest.py >> digest.log 2>&1
 ```
 
 ```bash
